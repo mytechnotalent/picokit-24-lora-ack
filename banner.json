@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-24-lora-ack",
+  "eyebrow": "PICOKIT // LESSON 24",
+  "title": "PICOKIT // LORA ACK",
+  "subtitle": "ACK TIMEOUT + RETRY + AUTHENTICATED HEARTBEAT",
+  "accent": "#B2FF47",
+  "dim": "#6E9E2C",
+  "white": "#E9F6E5",
+  "cyan": "#7FD8E0",
+  "bg": "#0C1104",
+  "bg_edge": "#030501",
+  "icon": "wifi",
+  "panel_status": "ACK 1 s  ·  RETRY 3  ·  AEAD :ON",
+  "chips": [
+    {
+      "label": "TIMEOUT",
+      "value": "1 s"
+    },
+    {
+      "label": "RETRY",
+      "value": "3"
+    },
+    {
+      "label": "KEY",
+      "value": "argon2id"
+    },
+    {
+      "label": "RADIO",
+      "value": "-44 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway cli ack --node 24 --seq 0",
+    "[*] node 00024  seq 18  HEARTBEAT  AEAD ok",
+    "[*] command CMD 2 applied  waiting ack",
+    "[+] retry 1 of 3  heartbeat resent",
+    "[+] ack received  rssi -44  snr 8.0"
+  ],
+  "categories": [
+    "COMMAND",
+    "ACK",
+    "RETRY",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "RX-01",
+      "label": "command",
+      "value": "cmd"
+    },
+    {
+      "tag": "TO-01",
+      "label": "timeout",
+      "value": "1 s"
+    },
+    {
+      "tag": "RT-01",
+      "label": "retry",
+      "value": "3"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  ACK REQUIRED  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  COMMAND  ·  WAIT  ·  RADIO  ==[ RETRY ]=="
+  ],
+  "layout": "stat",
+  "stat": "1 s"
+}
